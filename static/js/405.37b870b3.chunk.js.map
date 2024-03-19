@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/405.37b870b3.chunk.js","mappings":"yJAIA,QAJA,WACE,OAAOA,EAAAA,EAAAA,KAAA,QAAMC,UAAU,YAAWC,SAAC,eACrC,C","sources":["pages/NanniesPage/index.jsx"],"sourcesContent":["function NanniesPage() {\n  return <main className=\"container\">NanniesPage</main>;\n}\n\nexport default NanniesPage;\n"],"names":["_jsx","className","children"],"sourceRoot":""}
