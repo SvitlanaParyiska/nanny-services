@@ -13,7 +13,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={<Loader />} persistor={persistor}>
-        <BrowserRouter basename="/">
+        <BrowserRouter basename="/nanny-services">
           <App />
         </BrowserRouter>
       </PersistGate>

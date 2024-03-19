@@ -1,6 +1,7 @@
 {
   "name": "nanny-services",
   "version": "0.1.0",
+  "homepage": "https://SvitlanaParyiska.github.io/nanny-services/",
   "private": true,
   "dependencies": {
     "@emotion/styled": "^11.11.0",
