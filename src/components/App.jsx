@@ -1,4 +1,3 @@
-import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import SharedLayout from './SharedLayout';
 import { Toaster } from 'react-hot-toast';
@@ -17,7 +16,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="nannies" element={<Nannies />} />
           <Route
-            path="Favorites"
+            path="favorites"
             element={
               <PrivateRoute>
                 <Favorites />

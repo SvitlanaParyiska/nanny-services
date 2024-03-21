@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { logOut, login, refresh, register } from 'api/authApi';
+import { logOut, login, refresh, register } from 'api/fireBaseApi';
 
 const setAuthHeader = token => {
   axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;

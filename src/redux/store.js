@@ -11,6 +11,7 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { authReducer } from './authSlice';
+import { nannyReducer } from './nannySlice';
 
 const authPersistConfig = {
   key: 'auth',
@@ -18,8 +19,17 @@ const authPersistConfig = {
   whitelist: ['token'],
 };
 
+const nanniesPersistConfig = {
+  key: 'nannies',
+  storage,
+  whitelist: ['favorites'],
+};
+
 export const store = configureStore({
-  reducer: persistReducer(authPersistConfig, authReducer),
+  reducer: {
+    auth: persistReducer(authPersistConfig, authReducer),
+    nannies: persistReducer(nanniesPersistConfig, nannyReducer),
+  },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {

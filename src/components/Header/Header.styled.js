@@ -1,17 +1,28 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 // import { NavLink } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
-export const HeaderContainer = styled.header`
-  /* position: ${props => (props.current ? 'relative' : 'absolute')};
-  left: 0;
-  top: 0;
-  right: 0; */
-  /* padding: 12px 0; */
+export const HeaderStyled = styled.header`
+  background-color: ${props =>
+    props.current ? 'transparent' : 'var(--bg-secondary)'};
+  color: var(--color-text-secondary);
+  position: fixed;
+  width: 100%;
+  top: ${props => (props.current ? '32px' : '0')};
   border-bottom: ${props =>
-    props.current ? '1px solid #EFEDE833' : 'transparent'};
+    props.current ? '1px solid rgba(251, 251, 251, 0.4)' : 'transparent'};
+`;
 
-  /* @media screen and (min-width: 768px) {
-    padding: 19px 0;
-  } */
+export const HeaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const LogoStyled = styled(Link)`
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
 `;

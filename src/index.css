@@ -8,6 +8,7 @@
   /* text */
   --color-text-primary: rgba(17, 16, 28, 0.5);
   --color-text-accent: #11101c;
+  --color-text-secondary: #fbfbfb;
 
   /* border */
 
@@ -68,6 +69,11 @@ p {
   margin: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -77,6 +83,7 @@ ul {
 button {
   display: block;
   cursor: pointer;
+  font-family: inherit;
 }
 
 img {
@@ -88,19 +95,20 @@ img {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 152px 50px 100px 50px;
 }
 
 @media screen and (min-width: 1440px) {
   .container {
     max-width: 1440px;
-    padding: 0 128px;
+    padding: 152px 128px 100px 128px;
   }
 }
 
 .header-container {
   width: 100%;
-  padding: 20px 20px;
+  margin: 0 auto;
+  padding: 20px 50px;
 }
 
 @media screen and (min-width: 1440px) {
