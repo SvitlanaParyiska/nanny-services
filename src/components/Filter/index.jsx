@@ -1,11 +1,11 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import Select from 'react-select';
 import { optionsToFilter } from './filterOptions';
 import { InputBox, Title } from './Filter.styled';
 import { filterCustomStyle } from './FilterCustomStyles';
 
 function Filter() {
-  const [selectedFilter, setSelectedLanguage] = useState('');
+  //   const [selectedFilter, setSelectedLanguage] = useState('');
   return (
     <InputBox>
       <div>
@@ -15,9 +15,9 @@ function Filter() {
           aria-label="Filter nanny"
           styles={filterCustomStyle}
           defaultValue={optionsToFilter[0]}
-          onChange={e => {
-            setSelectedLanguage(e.value);
-          }}
+          //   onChange={e => {
+          //     setSelectedLanguage(e.value);
+          //   }}
         />
       </div>
     </InputBox>
