@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunknanny_services=self.webpackChunknanny_services||[]).push([[405],{405:(n,e,s)=>{s.r(e),s.d(e,{default:()=>c});var a=s(579);const c=function(){return(0,a.jsx)("main",{className:"container",children:"NanniesPage"})}}}]);
-//# sourceMappingURL=405.37b870b3.chunk.js.map

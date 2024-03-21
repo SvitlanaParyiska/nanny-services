@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunknanny_services=self.webpackChunknanny_services||[]).push([[176],{176:(e,n,s)=>{s.r(n),s.d(n,{default:()=>r});var c=s(579);const r=function(){return(0,c.jsx)("div",{children:"HomePage"})}}}]);
-//# sourceMappingURL=176.5f945329.chunk.js.map

@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.css": "/nanny-services/static/css/main.36f20369.css",
-    "main.js": "/nanny-services/static/js/main.c8102b79.js",
-    "static/js/176.5f945329.chunk.js": "/nanny-services/static/js/176.5f945329.chunk.js",
-    "static/js/405.37b870b3.chunk.js": "/nanny-services/static/js/405.37b870b3.chunk.js",
+    "main.css": "/nanny-services/static/css/main.8fa7eb8e.css",
+    "main.js": "/nanny-services/static/js/main.40276b88.js",
+    "static/js/96.993548de.chunk.js": "/nanny-services/static/js/96.993548de.chunk.js",
+    "static/js/690.21977d90.chunk.js": "/nanny-services/static/js/690.21977d90.chunk.js",
     "static/js/106.3d86d195.chunk.js": "/nanny-services/static/js/106.3d86d195.chunk.js",
+    "static/js/113.e9d84d34.chunk.js": "/nanny-services/static/js/113.e9d84d34.chunk.js",
+    "static/media/Rectangle@2x.jpg": "/nanny-services/static/media/Rectangle@2x.129563e909acb0facf67.jpg",
+    "static/media/Rectangle.jpg": "/nanny-services/static/media/Rectangle.2f93d3128be5e02c1322.jpg",
     "static/media/HelveticaNeueCyr-Roman.ttf": "/nanny-services/static/media/HelveticaNeueCyr-Roman.0ca719c710b1fbd7e02f.ttf",
     "static/media/HelveticaNeueCyr-Medium.ttf": "/nanny-services/static/media/HelveticaNeueCyr-Medium.bfdbae3c80f7aa49c618.ttf",
     "static/media/HelveticaNeueCyr-Bold.ttf": "/nanny-services/static/media/HelveticaNeueCyr-Bold.613e930355ab0b59fc48.ttf",
@@ -14,15 +17,17 @@
     "static/media/HelveticaNeueCyr-Roman.woff2": "/nanny-services/static/media/HelveticaNeueCyr-Roman.d59df5a538d671a54c79.woff2",
     "static/media/HelveticaNeueCyr-Medium.woff2": "/nanny-services/static/media/HelveticaNeueCyr-Medium.751c19bd96c1fdbe6c88.woff2",
     "static/media/HelveticaNeueCyr-Bold.woff2": "/nanny-services/static/media/HelveticaNeueCyr-Bold.a737902275e936eaf242.woff2",
+    "static/media/sprite.svg": "/nanny-services/static/media/sprite.22e72026b24a52b1495545c0da50acb5.svg",
     "index.html": "/nanny-services/index.html",
-    "main.36f20369.css.map": "/nanny-services/static/css/main.36f20369.css.map",
-    "main.c8102b79.js.map": "/nanny-services/static/js/main.c8102b79.js.map",
-    "176.5f945329.chunk.js.map": "/nanny-services/static/js/176.5f945329.chunk.js.map",
-    "405.37b870b3.chunk.js.map": "/nanny-services/static/js/405.37b870b3.chunk.js.map",
-    "106.3d86d195.chunk.js.map": "/nanny-services/static/js/106.3d86d195.chunk.js.map"
+    "main.8fa7eb8e.css.map": "/nanny-services/static/css/main.8fa7eb8e.css.map",
+    "main.40276b88.js.map": "/nanny-services/static/js/main.40276b88.js.map",
+    "96.993548de.chunk.js.map": "/nanny-services/static/js/96.993548de.chunk.js.map",
+    "690.21977d90.chunk.js.map": "/nanny-services/static/js/690.21977d90.chunk.js.map",
+    "106.3d86d195.chunk.js.map": "/nanny-services/static/js/106.3d86d195.chunk.js.map",
+    "113.e9d84d34.chunk.js.map": "/nanny-services/static/js/113.e9d84d34.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.36f20369.css",
-    "static/js/main.c8102b79.js"
+    "static/css/main.8fa7eb8e.css",
+    "static/js/main.40276b88.js"
   ]
 }
