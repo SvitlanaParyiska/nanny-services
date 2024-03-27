@@ -3,6 +3,7 @@
 :root {
   /* background */
   --bg-primary: #fbfbfb;
+  --bg-color: #f3f3f3;
   --bg-secondary: #103931;
 
   /* text */
@@ -54,7 +55,7 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--bg-primary);
+  background: var(--bg-color);
   color: var(--color-text-primary);
 }
 
@@ -65,6 +66,7 @@ code {
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
 }

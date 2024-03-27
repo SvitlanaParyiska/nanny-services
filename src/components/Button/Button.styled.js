@@ -5,7 +5,7 @@ export const ButtonStyle = styled.button`
   color: var(--color-text-secondary);
   font-weight: 500;
   font-size: 16px;
-  text-align:center;
+  text-align: center;
   line-height: 1.25;
   letter-spacing: -0.01em;
   border-radius: 30px;
@@ -21,7 +21,7 @@ export const ButtonStyle = styled.button`
     /* background: var(--accent); */
   }
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     padding: 10px 50px;
-  }
+  } */
 `;

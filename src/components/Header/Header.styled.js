@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-// import { NavLink } from 'react-router-dom';
-// import { Link } from 'react-router-dom';
 
 export const HeaderStyled = styled.header`
   background-color: ${props =>

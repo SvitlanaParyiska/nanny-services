@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { NavBox, NavLinkStyled, NavList } from './Navigation.styled';
 import { selectIsLoggedIn } from '../../redux/selectors';
+import sprite from '../../images/sprite.svg';
 
 function Navigation() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -9,10 +10,14 @@ function Navigation() {
     <NavBox>
       <NavList>
         <li>
-          <NavLinkStyled to="/">Home </NavLinkStyled>
+          <NavLinkStyled to="/" img={`${sprite}#icon-after`}>
+            Home{' '}
+          </NavLinkStyled>
         </li>
         <li>
-          <NavLinkStyled to="/nannies">Nannies</NavLinkStyled>
+          <NavLinkStyled to="/nannies" img={`${sprite}#icon-after`}>
+            Nannies
+          </NavLinkStyled>
         </li>
         {isLoggedIn && (
           <li>

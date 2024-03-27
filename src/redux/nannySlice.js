@@ -14,7 +14,7 @@ export const nannySlice = createSlice({
   name: 'nannies',
   initialState,
   reducers: {
-    getNannies: (state, action) => {
+    setNannies: (state, action) => {
       state.items = action.payload;
     },
     addFavorite: (state, action) => {
@@ -37,7 +37,7 @@ export const nannySlice = createSlice({
 });
 
 export const {
-  getNannies,
+  setNannies,
   addFavorite,
   removeFavorite,
   setFilter,

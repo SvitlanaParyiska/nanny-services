@@ -1,5 +1,14 @@
+import Filter from 'components/Filter';
+
 function FavoritesPage() {
-  return <main className="container">FavoritesPage</main>;
+  return (
+    <main>
+      <section className="container">
+        <Filter />
+        <p>FavoritePage</p>
+      </section>
+    </main>
+  );
 }
 
 export default FavoritesPage;

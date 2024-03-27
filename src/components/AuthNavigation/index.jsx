@@ -10,6 +10,7 @@ import toast from 'react-hot-toast';
 import ModalLogIn from 'components/Modals/ModalLogIn';
 import BasicModal from 'components/Modals/BasicModal';
 import ModalRegistr from 'components/Modals/ModalRegistr';
+import UserIcon from 'components/UserIcon';
 
 function AuthNavigation() {
   const [modalRegistration, setModalRegistration] = useState(false);
@@ -35,13 +36,16 @@ function AuthNavigation() {
   return (
     <AuthBox>
       {isLoggedIn ? (
-        <Button
-          type={'button'}
-          padding={'13px 39px'}
-          color={''}
-          text={'Log out'}
-          handleClick={handleLogOut}
-        />
+        <>
+          <UserIcon />
+          <Button
+            type={'button'}
+            padding={'13px 39px'}
+            color={''}
+            text={'Log out'}
+            handleClick={handleLogOut}
+          />
+        </>
       ) : (
         <>
           <Button
