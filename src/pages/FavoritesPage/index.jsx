@@ -11,9 +11,11 @@ function FavoritesPage() {
   return (
     <main className="nanny-page">
       <section className="container">
-        <Filter />
         {favArray.length > 0 ? (
-          <NanniesList listToRender={favArray} />
+          <>
+            <Filter />
+            <NanniesList listToRender={favArray} />
+          </>
         ) : (
           <>
             <TextStyled>Our list of favorites is empty... </TextStyled>

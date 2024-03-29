@@ -46,7 +46,7 @@ function LoginForm({ handleModalToggle }) {
       validationSchema={loginSchema}
     >
       {({ handleSubmit }) => (
-        <form onSubmit={handleSubmit}>
+        <form>
           <FormWrapper>
             <InputWrapper>
               <label>

@@ -1,3 +1,4 @@
+import { Field } from 'formik';
 import styled from 'styled-components';
 
 export const Box = styled.div`
@@ -15,28 +16,28 @@ export const Box = styled.div`
     fill: #fff;
     stroke: #000;
   }
-`;
 
-export const Input = styled.input`
-  width: 232px;
-  height: 52px;
-  padding: 5px;
-  border: 1px solid rgba(17, 16, 28, 0.1);
-  border-radius: 10px;
-  margin-bottom: 16px;
-  color: #11101c;
-  font-size: 16px;
-  line-height: 1.25;
-
-  &::placeholder {
+  input {
+    width: 232px;
+    height: 52px;
+    padding: 5px;
+    border: 1px solid rgba(17, 16, 28, 0.1);
+    border-radius: 10px;
+    margin-bottom: 16px;
     color: #11101c;
     font-size: 16px;
-    font-weight: 400;
-    line-height: 14px;
+    line-height: 1.25;
+
+    &::placeholder {
+      color: #11101c;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 14px;
+    }
   }
 `;
 
-export const InputBig = styled.input`
+export const FieldStyled = styled(Field)`
   width: 100%;
   height: 52px;
   padding: 5px;
@@ -89,4 +90,12 @@ export const ButtonStyled = styled.button`
     /* background-c: #a1b3a8; */
     /* color: ; */
   }
+`;
+
+export const ErrorText = styled.div`
+  color: red;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.142;
+  margin-top: 4px;
 `;
