@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/nanny-services/static/css/main.af38bcc2.css",
-    "main.js": "/nanny-services/static/js/main.aa8ba448.js",
+    "main.js": "/nanny-services/static/js/main.d816188f.js",
     "static/js/96.64a4fe55.chunk.js": "/nanny-services/static/js/96.64a4fe55.chunk.js",
-    "static/js/181.4a665fc3.chunk.js": "/nanny-services/static/js/181.4a665fc3.chunk.js",
-    "static/js/106.e4ddcf9a.chunk.js": "/nanny-services/static/js/106.e4ddcf9a.chunk.js",
+    "static/js/181.3877ad3d.chunk.js": "/nanny-services/static/js/181.3877ad3d.chunk.js",
+    "static/js/106.2236a17a.chunk.js": "/nanny-services/static/js/106.2236a17a.chunk.js",
     "static/js/113.4a75599e.chunk.js": "/nanny-services/static/js/113.4a75599e.chunk.js",
     "static/media/Rectangle@2x.jpg": "/nanny-services/static/media/Rectangle@2x.129563e909acb0facf67.jpg",
     "static/media/Rectangle.jpg": "/nanny-services/static/media/Rectangle.2f93d3128be5e02c1322.jpg",
@@ -21,14 +21,14 @@
     "static/media/sprite.svg": "/nanny-services/static/media/sprite.0429d0a2baed71aac671029daf44735f.svg",
     "index.html": "/nanny-services/index.html",
     "main.af38bcc2.css.map": "/nanny-services/static/css/main.af38bcc2.css.map",
-    "main.aa8ba448.js.map": "/nanny-services/static/js/main.aa8ba448.js.map",
+    "main.d816188f.js.map": "/nanny-services/static/js/main.d816188f.js.map",
     "96.64a4fe55.chunk.js.map": "/nanny-services/static/js/96.64a4fe55.chunk.js.map",
-    "181.4a665fc3.chunk.js.map": "/nanny-services/static/js/181.4a665fc3.chunk.js.map",
-    "106.e4ddcf9a.chunk.js.map": "/nanny-services/static/js/106.e4ddcf9a.chunk.js.map",
+    "181.3877ad3d.chunk.js.map": "/nanny-services/static/js/181.3877ad3d.chunk.js.map",
+    "106.2236a17a.chunk.js.map": "/nanny-services/static/js/106.2236a17a.chunk.js.map",
     "113.4a75599e.chunk.js.map": "/nanny-services/static/js/113.4a75599e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.af38bcc2.css",
-    "static/js/main.aa8ba448.js"
+    "static/js/main.d816188f.js"
   ]
 }
