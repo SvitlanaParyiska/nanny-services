@@ -4,7 +4,7 @@ import { getNanny } from './nannyOperations';
 const initialState = {
   items: [],
   favorites: [],
-  filter: '',
+  filter: 'all',
 };
 
 export const nannySlice = createSlice({
@@ -20,7 +20,6 @@ export const nannySlice = createSlice({
     setFilter: (state, { payload }) => {
       state.filter = payload;
     },
-    removeFilter(state) {},
   },
 
   extraReducers: builder => {
@@ -38,7 +37,6 @@ export const nannySlice = createSlice({
   },
 });
 
-export const { addFavorite, removeFavorite, setFilter, removeFilter } =
-  nannySlice.actions;
+export const { addFavorite, removeFavorite, setFilter } = nannySlice.actions;
 
 export const nannyReducer = nannySlice.reducer;

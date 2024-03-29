@@ -7,8 +7,8 @@ import { useState } from 'react';
 
 function NanniesList() {
   const [limit, setLimit] = useState(3);
-  // const [selected, setSelected] = useState('A to Z');
   const nannies = useSelector(selectItems);
+  // const selectFilter = useSelector(selectFilter());
 
   const handleLoadMore = () => {
     setLimit(prevCount => prevCount + 3);
