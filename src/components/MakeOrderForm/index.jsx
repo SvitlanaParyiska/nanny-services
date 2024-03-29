@@ -2,6 +2,7 @@ import toast from 'react-hot-toast';
 import { makeOrderSchema } from '../../helpers/validationSchemas';
 import { useFormik } from 'formik';
 import {
+  Box,
   ButtonStyled,
   Input,
   InputAria,
@@ -33,47 +34,49 @@ function MakeOrderForm({ handleModalToggle }) {
 
   return (
     <form onSubmit={formik.onSubmit}>
-      <label>
-        <Input
-          name="address"
-          placeholder="Address"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.address}
-          $error={formik.touched.address && formik.errors.address}
-        />
-      </label>
-      <label>
-        <Input
-          name="phone"
-          placeholder="+380"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.phone}
-          $error={formik.touched.phone && formik.errors.phone}
-        />
-      </label>
-      <label>
-        <Input
-          name="childAge"
-          placeholder="Child's age"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.childAge}
-          $error={formik.touched.childAge && formik.errors.childAge}
-        />
-      </label>
-      <label>
-        <Input
-          name="time"
-          placeholder="00:00"
-          type="time"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.time}
-          $error={formik.touched.time && formik.errors.time}
-        />
-      </label>
+      <Box>
+        <label>
+          <Input
+            name="address"
+            placeholder="Address"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.address}
+            $error={formik.touched.address && formik.errors.address}
+          />
+        </label>
+        <label>
+          <Input
+            name="phone"
+            placeholder="+380"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.phone}
+            $error={formik.touched.phone && formik.errors.phone}
+          />
+        </label>
+        <label>
+          <Input
+            name="childAge"
+            placeholder="Child's age"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.childAge}
+            $error={formik.touched.childAge && formik.errors.childAge}
+          />
+        </label>
+        <label>
+          <Input
+            name="time"
+            placeholder="00:00"
+            type="time"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.time}
+            $error={formik.touched.time && formik.errors.time}
+          />
+        </label>
+      </Box>
 
       <label>
         <InputBig

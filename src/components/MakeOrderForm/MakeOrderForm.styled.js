@@ -1,111 +1,75 @@
 import styled from 'styled-components';
 
+export const Box = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+
+  svg {
+    background-color: #fff;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    stroke: #000;
+  }
+`;
+
 export const Input = styled.input`
-  display: block;
-  width: 270px;
-  height: 30px;
+  width: 232px;
+  height: 52px;
   padding: 5px;
   border: 1px solid rgba(17, 16, 28, 0.1);
   border-radius: 10px;
+  margin-bottom: 16px;
+  color: #11101c;
+  font-size: 16px;
+  line-height: 1.25;
 
   &::placeholder {
-    color: var(--span-color--);
-    font-size: 12px;
+    color: #11101c;
+    font-size: 16px;
     font-weight: 400;
     line-height: 14px;
-    letter-spacing: 0%;
-  }
-
-  @media (min-width: 768px) {
-    width: 100%;
-    height: 40px;
-
-    border-radius: 12px;
-    &::placeholder {
-      font-size: 16px;
-      line-height: 20px;
-    }
-  }
-
-  @media (min-width: 1440px) {
-    width: 100%;
-    height: 52px;
-    border-radius: 12px;
-    &::placeholder {
-      font-size: 16px;
-      line-height: 20px;
-    }
   }
 `;
 
 export const InputBig = styled.input`
-  width: 270px;
-  height: 30px;
+  width: 100%;
+  height: 52px;
   padding: 5px;
   border: 1px solid rgba(17, 16, 28, 0.1);
   border-radius: 10px;
+  margin-bottom: 16px;
+  color: #11101c;
+  font-size: 16px;
+  line-height: 1.25;
+
   &::placeholder {
-    color: var(--span-color--);
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 14px;
-    letter-spacing: 0%;
-  }
-
-  @media (min-width: 768px) {
-    height: 40px;
-    width: 430px;
-    padding: 16px;
-    border-radius: 12px;
-
-    &::placeholder {
-      font-size: 14px;
-      line-height: 20px;
-    }
-    @media (min-width: 768px) {
-      ::placeholder {
-        font-size: 16px;
-        line-height: 20px;
-      }
-    }
+    color: #11101c;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
   }
 `;
 
 export const InputAria = styled.input`
-  width: 270px;
-  height: 70px;
+  width: 100%;
+  height: 116px;
   padding: 5px;
   border: 1px solid rgba(17, 16, 28, 0.1);
   border-radius: 10px;
-  margin-bottom: 10px;
+  color: #11101c;
+  font-size: 16px;
+  line-height: 1.25;
 
   &::placeholder {
-    color: var(--span-color--);
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 14px;
-    letter-spacing: 0%;
-    transform: translateY(-20px);
-  }
-
-  @media (min-width: 768px) {
-    width: 430px;
-    height: 100px;
-    padding: 16px;
-    border-radius: 12px;
-    margin-bottom: 24px;
-
-    &::placeholder {
-      height: 116px;
-      font-size: 16px;
-      line-height: 20px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    &::placeholder {
-      transform: translateY(-30px);
-    }
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #11101c;
   }
 `;
 
@@ -119,9 +83,10 @@ export const ButtonStyled = styled.button`
   font-weight: 500;
   line-height: 1.25;
   letter-spacing: -0.01em;
+  margin-top: 40px;
 
   &:hover {
     /* background-c: #a1b3a8; */
-    /* color: var(--main-color--); */
+    /* color: ; */
   }
 `;

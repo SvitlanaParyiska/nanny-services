@@ -2,7 +2,7 @@ import Filter from 'components/Filter';
 
 function FavoritesPage() {
   return (
-    <main>
+    <main className="nanny-page">
       <section className="container">
         <Filter />
         <p>FavoritePage</p>

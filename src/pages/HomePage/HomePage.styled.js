@@ -4,9 +4,10 @@ import bgRetina from 'images/Rectangle@2x.jpg';
 import { Link } from 'react-router-dom';
 
 export const SectionStyled = styled.section`
+  background-color: var(--bg-primary);
   max-width: 1440px;
   margin: 0 auto;
-  padding: 32px;
+  padding: 20px 32px;
 `;
 
 export const SectionBox = styled.div`

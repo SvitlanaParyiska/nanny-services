@@ -55,7 +55,7 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--bg-color);
+  background: var(--bg-primary);
   color: var(--color-text-primary);
 }
 
@@ -118,4 +118,14 @@ img {
     max-width: 1440px;
     padding: 20px 128px;
   }
+}
+
+input::-webkit-calendar-picker-indicator {
+  width: 20px;
+  height: 20px;
+  padding-right: 8px;
+}
+
+.nanny-page {
+  background-color: #f3f3f3;
 }

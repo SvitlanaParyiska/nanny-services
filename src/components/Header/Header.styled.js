@@ -19,8 +19,17 @@ export const HeaderContainer = styled.div`
 `;
 
 export const LogoStyled = styled(Link)`
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.17;
-  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  > img {
+    width: 0;
+  }
+  > p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+  }
 `;

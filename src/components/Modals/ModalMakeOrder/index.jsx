@@ -4,7 +4,10 @@ import { NannyInfoBox, Text, Title, Wrapper } from './ModalMakeOrder.styled';
 function ModalMakeOrder({ handleModalToggle, avatar, name }) {
   return (
     <Wrapper>
-      <Title>Make an appointment with a babysitter</Title>
+      <Title>
+        Make an appointment <br />
+        with a babysitter
+      </Title>
       <Text>
         Arranging a meeting with a caregiver for your child is the first step to
         creating a safe and comfortable environment. Fill out the form below so

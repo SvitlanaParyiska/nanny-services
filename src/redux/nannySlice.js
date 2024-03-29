@@ -1,47 +1,44 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { getNanny } from './nannyOperations';
 
 const initialState = {
   items: [],
   favorites: [],
-  filter: {
-    language: '',
-    level: '',
-    price: '',
-  },
+  filter: '',
 };
 
 export const nannySlice = createSlice({
-  name: 'nannies',
+  name: 'nanny',
   initialState,
   reducers: {
-    setNannies: (state, action) => {
-      state.items = action.payload;
+    addFavorite: (state, { payload }) => {
+      state.favorites.push(payload);
     },
-    addFavorite: (state, action) => {
-      state.favorites.push(action.payload);
+    removeFavorite: (state, { payload }) => {
+      state.favorites = state.favorites.filter();
     },
-    removeFavorite: (state, action) => {
-      state.favorites = state.favorites.filter(
-        item => item.lessons_done !== action.payload.lessons_done
-      );
+    setFilter: (state, { payload }) => {
+      state.filter = payload;
     },
-    setFilter: (state, action) => {
-      state.filter = action.payload;
-    },
-    removeFilter(state) {
-      state.filter.language = '';
-      state.filter.level = '';
-      state.filter.price = '';
-    },
+    removeFilter(state) {},
+  },
+
+  extraReducers: builder => {
+    builder
+      .addCase(getNanny.pending, state => {
+        state.isLoading = true;
+      })
+      .addCase(getNanny.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.items = payload;
+      })
+      .addCase(getNanny.rejected, state => {
+        state.isLoading = false;
+      });
   },
 });
 
-export const {
-  setNannies,
-  addFavorite,
-  removeFavorite,
-  setFilter,
-  removeFilter,
-} = nannySlice.actions;
+export const { addFavorite, removeFavorite, setFilter, removeFilter } =
+  nannySlice.actions;
 
 export const nannyReducer = nannySlice.reducer;

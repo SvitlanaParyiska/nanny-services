@@ -1,17 +1,32 @@
 import { nanoid } from 'nanoid';
-import { ListStyled } from './NanniesList.styled';
+import { Button, ListStyled } from './NanniesList.styled';
 import NanniesItem from 'components/NanniesItem';
 import { useSelector } from 'react-redux';
 import { selectItems } from '../../redux/selectors';
+import { useState } from 'react';
 
 function NanniesList() {
+  const [limit, setLimit] = useState(3);
+  // const [selected, setSelected] = useState('A to Z');
   const nannies = useSelector(selectItems);
 
+  const handleLoadMore = () => {
+    setLimit(prevCount => prevCount + 3);
+  };
+
   return (
-    <ListStyled>
-      {nannies?.length > 0 &&
-        nannies.map(nanny => <NanniesItem item={nanny} key={nanoid()} />)}
-    </ListStyled>
+    <>
+      <ListStyled>
+        {nannies?.slice(0, limit).map(nanny => (
+          <NanniesItem item={nanny} key={nanoid()} />
+        ))}
+      </ListStyled>
+      {nannies?.length > limit && (
+        <Button type="button" onClick={handleLoadMore}>
+          Load more
+        </Button>
+      )}
+    </>
   );
 }
 
