@@ -24,7 +24,7 @@ export const LogoStyled = styled(Link)`
   gap: 10px;
 
   > img {
-    width: 0;
+    width: 50px;
   }
   > p {
     font-weight: 500;

@@ -15,7 +15,8 @@ export const nannySlice = createSlice({
       state.favorites.push(payload);
     },
     removeFavorite: (state, { payload }) => {
-      state.favorites = state.favorites.filter();
+      const index = state.favorites.findIndex(item => item.name === payload);
+      state.favorites.splice(index, 1);
     },
     setFilter: (state, { payload }) => {
       state.filter = payload;

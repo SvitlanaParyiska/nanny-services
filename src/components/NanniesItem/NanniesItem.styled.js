@@ -84,11 +84,7 @@ export const IconFavAdd = styled.svg`
   width: 26px;
   stroke: var(--color-text-accent);
   fill: none;
-`;
-
-export const IconFav = styled.svg`
-  height: 26px;
-  width: 26px;
+  cursor: pointer;
 `;
 
 export const IconLoc = styled.svg`

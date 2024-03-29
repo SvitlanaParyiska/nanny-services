@@ -1,13 +1,11 @@
 import { nanoid } from 'nanoid';
 import { Button, ListStyled } from './NanniesList.styled';
 import NanniesItem from 'components/NanniesItem';
-import { useSelector } from 'react-redux';
-import { selectItems } from '../../redux/selectors';
 import { useState } from 'react';
 
-function NanniesList() {
+function NanniesList({ listToRender }) {
   const [limit, setLimit] = useState(3);
-  const nannies = useSelector(selectItems);
+
   // const selectFilter = useSelector(selectFilter());
 
   const handleLoadMore = () => {
@@ -17,11 +15,11 @@ function NanniesList() {
   return (
     <>
       <ListStyled>
-        {nannies?.slice(0, limit).map(nanny => (
+        {listToRender?.slice(0, limit).map(nanny => (
           <NanniesItem item={nanny} key={nanoid()} />
         ))}
       </ListStyled>
-      {nannies?.length > limit && (
+      {listToRender?.length > limit && (
         <Button type="button" onClick={handleLoadMore}>
           Load more
         </Button>

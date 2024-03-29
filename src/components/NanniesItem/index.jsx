@@ -18,21 +18,48 @@ import {
 } from './NanniesItem.styled';
 import sprite from '../../images/sprite.svg';
 import { countAge } from 'helpers/nannyHelpers';
-// import { selectItems } from '../../redux/selectors';
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import ReviewItem from 'components/ReviewItem';
 import ModalMakeOrder from 'components/Modals/ModalMakeOrder';
 import BasicModal from 'components/Modals/BasicModal';
-
-// const heartIcon = isFavorite ? 'icon-heart-color' : 'icon-heart';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectFavorites, selectIsLoggedIn } from '../../redux/selectors';
+import { addFavorite, removeFavorite } from '../../redux/nannySlice';
+import toast from 'react-hot-toast';
 
 function NanniesItem({ item }) {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+  const dispatch = useDispatch();
+  const favArray = useSelector(selectFavorites);
+  const isFavorite = favArray.find(nanny => nanny.name === item.name);
   const [isReadMore, setIsReadMore] = useState(false);
   const [modalMakeOr, setModalMakeOr] = useState(false);
 
+  const heartIcon = isFavorite ? 'icon-heart-color' : 'icon-heart';
+
   const handleModalMakeOrder = () => {
     setModalMakeOr(state => !state);
+  };
+
+  const handleFav = () => {
+    if (!isLoggedIn) {
+      toast.error('Please login to this operation!', {
+        timeout: 2000,
+      });
+      return;
+    }
+    if (isFavorite) {
+      dispatch(removeFavorite(item.name));
+      toast.success('Nanny was successful deleted!', {
+        timeout: 2000,
+      });
+    } else {
+      dispatch(addFavorite(item));
+      toast.success('Nanny was successful added!', {
+        timeout: 2000,
+      });
+    }
   };
 
   return (
@@ -64,8 +91,8 @@ function NanniesItem({ item }) {
                 Price / 1 hour: <span>{item.price_per_hour}$</span>
               </p>
             </LocationThumb>
-            <IconFavAdd aria-label="heart">
-              <use href={`${sprite}#icon-heart`} />
+            <IconFavAdd aria-label="heart" onClick={handleFav}>
+              <use href={`${sprite}#${heartIcon}`} />
             </IconFavAdd>
           </LocationBox>
         </NameBox>

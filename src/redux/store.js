@@ -19,8 +19,8 @@ const authPersistConfig = {
   whitelist: ['token'],
 };
 
-const nanniesPersistConfig = {
-  key: 'nannies',
+const nannyPersistConfig = {
+  key: 'nanny',
   storage,
   whitelist: ['favorites'],
 };
@@ -28,7 +28,7 @@ const nanniesPersistConfig = {
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-    nannies: persistReducer(nanniesPersistConfig, nannyReducer),
+    nanny: persistReducer(nannyPersistConfig, nannyReducer),
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
