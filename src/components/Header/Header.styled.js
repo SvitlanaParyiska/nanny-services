@@ -6,6 +6,7 @@ export const HeaderStyled = styled.header`
     props.current ? 'transparent' : 'var(--bg-secondary)'};
   color: var(--color-text-secondary);
   position: fixed;
+  z-index: 30;
   width: 100%;
   top: ${props => (props.current ? '32px' : '0')};
   border-bottom: ${props =>

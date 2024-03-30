@@ -11,7 +11,7 @@ function Navigation() {
       <NavList>
         <li>
           <NavLinkStyled to="/" img={`${sprite}#icon-after`}>
-            Home{' '}
+            Home
           </NavLinkStyled>
         </li>
         <li>

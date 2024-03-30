@@ -16,13 +16,13 @@ import { nannyReducer } from './nannySlice';
 const authPersistConfig = {
   key: 'auth',
   storage,
-  whitelist: ['token'],
+  whitelist: ['user', 'isLoggedIn'],
 };
 
 const nannyPersistConfig = {
   key: 'nanny',
   storage,
-  whitelist: ['favorites'],
+  whitelist: ['favorites', 'user'],
 };
 
 export const store = configureStore({

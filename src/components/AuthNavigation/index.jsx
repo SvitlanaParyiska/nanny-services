@@ -3,14 +3,11 @@ import { AuthBox } from './AuthNavigation.styled';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/selectors';
-import { signOut } from 'firebase/auth';
-import { auth } from '../../firebase';
-import { removeUser } from '../../redux/authSlice';
-import toast from 'react-hot-toast';
 import ModalLogIn from 'components/Modals/ModalLogIn';
 import BasicModal from 'components/Modals/BasicModal';
 import ModalRegistr from 'components/Modals/ModalRegistr';
 import UserIcon from 'components/UserIcon';
+import { logOut } from '../../redux/authOperations';
 
 function AuthNavigation() {
   const [modalRegistration, setModalRegistration] = useState(false);
@@ -27,10 +24,7 @@ function AuthNavigation() {
   };
 
   const handleLogOut = () => {
-    signOut(auth)
-      .then(() => toast.success('You have successfully logged out'))
-      .catch(error => console.log(error));
-    dispatch(removeUser());
+    dispatch(logOut());
   };
 
   return (

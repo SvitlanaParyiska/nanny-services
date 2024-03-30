@@ -1,12 +1,11 @@
 import { Formik, Field } from 'formik';
 import { ErrorMessage } from 'formik';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../firebase';
 import { registrationSchema } from '../../helpers/validationSchemas';
 import { useState } from 'react';
 import sprite from '../../images/sprite.svg';
 import Button from 'components/Button';
 import {
+  ButtonStyled,
   ButtonWrapper,
   ErrorText,
   FormWrapper,
@@ -14,15 +13,18 @@ import {
   InputWrapper,
   SvgPasswordIcon,
 } from './RegistrationForm.styled';
-
-const initialValues = {
-  name: '',
-  email: '',
-  password: '',
-};
+import { useDispatch } from 'react-redux';
+import { registration } from '../../redux/authOperations';
 
 function RegistrationForm({ handleModalToggle }) {
+  const dispatch = useDispatch();
   const [showPassword, setShowPassword] = useState(false);
+
+  const initialValues = {
+    name: '',
+    email: '',
+    password: '',
+  };
 
   const togglePassword = () => {
     setShowPassword(prev => !prev);
@@ -30,23 +32,29 @@ function RegistrationForm({ handleModalToggle }) {
 
   const passwordIcon = showPassword ? 'icon-eye' : 'icon-eye-off';
 
-  const handleSubmit = ({ email, password }, actions) => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then(() => {
-        actions.resetForm();
-      })
-      .catch(error => console.log(error));
-    handleModalToggle();
-  };
+  // const handleSubmit = async ({ name, email, password }, actions) => {
+  //   try {
+  //     console.log(name, email, password);
+  //     dispatch(registration({ name, email, password }));
+  //     actions.resetForm();
+  //     handleModalToggle();
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <Formik
       initialValues={initialValues}
-      onSubmit={handleSubmit}
+      onSubmit={(values, actions) => {
+        dispatch(registration(values));
+        actions.resetForm();
+        handleModalToggle();
+      }}
       validationSchema={registrationSchema}
     >
-      {({ handleSubmit }) => (
-        <form>
+      {props => (
+        <form onSubmit={props.handleSubmit}>
           <FormWrapper>
             <InputWrapper>
               <label>
@@ -76,15 +84,7 @@ function RegistrationForm({ handleModalToggle }) {
               </label>
             </InputWrapper>
           </FormWrapper>
-          <ButtonWrapper>
-            <Button
-              padding={'16px 186px'}
-              text={'Sign Up'}
-              type={'submit'}
-              color={'#103931'}
-              handleClick={handleSubmit}
-            />
-          </ButtonWrapper>
+          <ButtonStyled type="submit">Log up</ButtonStyled>
         </form>
       )}
     </Formik>

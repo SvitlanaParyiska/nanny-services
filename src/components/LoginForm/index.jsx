@@ -1,8 +1,6 @@
 import { Formik, Field } from 'formik';
 import { useState } from 'react';
 import sprite from '../../images/sprite.svg';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../firebase';
 import { loginSchema } from '../../helpers/validationSchemas';
 import { ErrorMessage } from 'formik';
 import {
@@ -14,14 +12,17 @@ import {
   SvgPasswordIcon,
 } from './LoginForm.styled';
 import Button from 'components/Button';
-
-const initialValues = {
-  email: '',
-  password: '',
-};
+import { useDispatch } from 'react-redux';
+import { logIn } from '../../redux/authOperations';
 
 function LoginForm({ handleModalToggle }) {
+  const dispatch = useDispatch();
   const [showPassword, setShowPassword] = useState(false);
+
+  const initialValues = {
+    email: '',
+    password: '',
+  };
 
   const togglePassword = () => {
     setShowPassword(prev => !prev);
@@ -29,14 +30,15 @@ function LoginForm({ handleModalToggle }) {
 
   const passwordIcon = showPassword ? 'icon-eye' : 'icon-eye-off';
 
-  const handleSubmit = ({ email, password }, actions) => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then(() => {
-        actions.resetForm();
-      })
-      .catch(error => console.log(error));
-
-    handleModalToggle();
+  const handleSubmit = async ({ email, password }, actions) => {
+    console.log(email, password);
+    try {
+      dispatch(logIn({ email, password }));
+      actions.resetForm();
+      handleModalToggle();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -46,7 +48,7 @@ function LoginForm({ handleModalToggle }) {
       validationSchema={loginSchema}
     >
       {({ handleSubmit }) => (
-        <form>
+        <form onSubmit={handleSubmit}>
           <FormWrapper>
             <InputWrapper>
               <label>

@@ -69,3 +69,13 @@ export const SvgPasswordIcon = styled.svg`
   width: 20px;
   height: 20px;
 `;
+
+export const ButtonStyled = styled.button`
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 16px 190px;
+  border-radius: 30px;
+  background-color: #103931;
+  color: #fbfbfb;
+`;

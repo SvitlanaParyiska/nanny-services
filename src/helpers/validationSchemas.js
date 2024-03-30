@@ -5,7 +5,7 @@ const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 export const registrationSchema = yup.object().shape({
-  username: yup
+  name: yup
     .string()
     .required('Field is required')
     .min(3, 'Minimum 3 characters')

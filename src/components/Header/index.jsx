@@ -10,7 +10,7 @@ function Header() {
     <HeaderStyled current={currentUrl.pathname === '/' ? 'main' : ''}>
       <HeaderContainer className="header-container">
         <LogoStyled to="/">
-          <img src={LogoSvg} alt="logo"></img>
+          <img src={LogoSvg} alt="logo" />
           <p>Nanny.Services</p>
         </LogoStyled>
         <Navigation />
