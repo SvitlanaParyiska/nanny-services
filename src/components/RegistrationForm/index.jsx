@@ -30,14 +30,20 @@ function RegistrationForm({ handleModalToggle }) {
 
   const passwordIcon = showPassword ? 'icon-eye' : 'icon-eye-off';
 
+  const handleSubmit = async ({ name, email, password }, actions) => {
+    try {
+      await dispatch(registration({ name, email, password })).unwrap();
+      actions.resetForm();
+      handleModalToggle();
+    } catch (error) {
+      return error;
+    }
+  };
+
   return (
     <Formik
       initialValues={initialValues}
-      onSubmit={(values, actions) => {
-        dispatch(registration(values));
-        actions.resetForm();
-        handleModalToggle();
-      }}
+      onSubmit={handleSubmit}
       validationSchema={registrationSchema}
     >
       {props => (

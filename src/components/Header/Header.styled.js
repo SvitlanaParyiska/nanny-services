@@ -16,7 +16,7 @@ export const HeaderStyled = styled.header`
 export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: ${props => (props.current ? '' : 'space-between')};
 `;
 
 export const LogoStyled = styled(Link)`

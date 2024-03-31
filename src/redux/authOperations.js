@@ -11,20 +11,24 @@ import toast from 'react-hot-toast';
 export const registration = createAsyncThunk(
   'auth/registration',
   async (body, thunkAPI) => {
+    const { name, email, password } = body;
+    const auth = getAuth();
     try {
-      console.log(body.email, body.password);
-      const auth = getAuth();
       const response = await createUserWithEmailAndPassword(
         auth,
-        body.email,
-        body.password
+        email,
+        password
       );
+      const user = response.user;
       await updateProfile(auth.currentUser, {
-        displayName: body.name,
+        displayName: name,
       });
       toast.success('You have successfully registration');
-      console.log(response.user);
-      return response.user;
+      return {
+        email: user.email,
+        id: user.uid,
+        name: user.displayName,
+      };
     } catch (error) {
       if (error.code === 'auth/weak-password') {
         toast.error('Password is too weak.');
@@ -33,31 +37,30 @@ export const registration = createAsyncThunk(
       } else {
         toast.error('Please try again later.');
       }
-      return { error: error.message };
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
 
 export const logIn = createAsyncThunk('auth/logIn', async (body, thunkAPI) => {
+  const { email, password } = body;
+  const auth = getAuth();
   try {
-    const auth = getAuth();
-    const response = await signInWithEmailAndPassword(
-      auth,
-      body.email,
-      body.password
-    );
-    const { uid, displayName, email } = response.user;
+    const response = await signInWithEmailAndPassword(auth, email, password);
+    const user = response.user;
     toast.success('You have successfully login');
-    return { uid, displayName, email };
-  } catch (e) {
-    console.log(e.message);
-    if (e.message === 'auth/invalid-credential') {
+    return {
+      email: user.email,
+      id: user.uid,
+      name: user.displayName,
+    };
+  } catch (error) {
+    if (error.code === 'auth/invalid-credential') {
       toast.error('Login invalid!');
     } else {
       toast.error('Something went wrong. Please try again!');
     }
-    console.log(e);
-    return { error: e.message };
+    return thunkAPI.rejectWithValue(error.message);
   }
 });
 
@@ -66,8 +69,8 @@ export const logOut = createAsyncThunk('auth/logOut', async (_, thunkAPI) => {
     const auth = getAuth();
     await signOut(auth);
     toast.success('You have successfully logged out');
-  } catch (e) {
+  } catch (error) {
     toast.error('Something went wrong. Please try again!');
-    return { error: e.message };
+    return thunkAPI.rejectWithValue(error.message);
   }
 });

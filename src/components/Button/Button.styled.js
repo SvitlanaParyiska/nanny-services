@@ -9,7 +9,7 @@ export const ButtonStyle = styled.button`
   line-height: 1.25;
   letter-spacing: -0.01em;
   border-radius: 30px;
-  padding: ${props => props.padding};
+  padding: ${props => props.$padding};
   transition: background-color 250ms var(--transition);
   border: ${props =>
     props.color

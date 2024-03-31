@@ -1,7 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const NavBox = styled.nav``;
+export const NavBox = styled.nav`
+  margin-right: ${props => (props.$current ? '92px' : '')};
+  margin-left: ${props => (props.$current ? 'auto' : '')};
+`;
 export const NavList = styled.ul`
   display: flex;
   gap: 40px;

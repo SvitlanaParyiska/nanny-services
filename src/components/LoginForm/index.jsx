@@ -32,11 +32,11 @@ function LoginForm({ handleModalToggle }) {
 
   const handleSubmit = async ({ email, password }, actions) => {
     try {
-      dispatch(logIn({ email, password }));
+      await dispatch(logIn({ email, password })).unwrap();
       actions.resetForm();
       handleModalToggle();
     } catch (error) {
-      console.log(error);
+      return error;
     }
   };
 

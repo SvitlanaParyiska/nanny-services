@@ -4,7 +4,7 @@ function Button({ type, padding, color, text, handleClick }) {
   return (
     <ButtonStyle
       type={type}
-      padding={padding}
+      $padding={padding}
       color={color}
       onClick={() => handleClick()}
     >

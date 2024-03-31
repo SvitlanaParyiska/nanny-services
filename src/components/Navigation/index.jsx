@@ -2,12 +2,14 @@ import { useSelector } from 'react-redux';
 import { NavBox, NavLinkStyled, NavList } from './Navigation.styled';
 import { selectIsLoggedIn } from '../../redux/selectors';
 import sprite from '../../images/sprite.svg';
+import { useLocation } from 'react-router-dom';
 
 function Navigation() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
+  const currentUrl = useLocation();
 
   return (
-    <NavBox>
+    <NavBox $current={currentUrl.pathname === '/' ? 'main' : ''}>
       <NavList>
         <li>
           <NavLinkStyled to="/" img={`${sprite}#icon-after`}>
