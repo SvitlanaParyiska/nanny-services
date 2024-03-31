@@ -128,7 +128,7 @@ input::-webkit-calendar-picker-indicator {
 
 .nanny-page {
   background-color: #f3f3f3;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 input[type='number'] {

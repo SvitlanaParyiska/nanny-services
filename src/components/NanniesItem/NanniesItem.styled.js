@@ -16,6 +16,9 @@ export const Thumb = styled.div`
 export const ImageBorder = styled.div`
   border: 2px solid rgba(240, 63, 59, 0.2);
   border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px;
   width: 120px;
   height: 120px;

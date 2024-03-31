@@ -6,27 +6,32 @@ Nanny services
   <br>
 </h1>
 
-## Available Scripts
+Find your nanny with our service. Easy filtering, ability to add to favorites
+and quickly fill out an application.
 
-In the project directory, you can run:
+## Technology:
 
-### `npm start`
+- React
+- React-dom
+- React-responsive
+- React-select
+- Firebase
+- Redux Toolkit
+- Redux Persist
+- Formik
+- react-hot-toast
+- Styled-components
+- Yup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Scripts:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| LEFT          | RIGHT                   |
+| ------------- | ----------------------- |
+| npm i         | dependency installation |
+| npm run start | start local server      |
+| npm run build | production build        |
 
-### `npm run build`
+[Link to site](https://svitlanaparyiska.github.io/nanny-services/ 'Nanny Services')
+[Link to Figma layout](https://www.figma.com/file/u36ajEOsnwio2GDGiabVPD/Nanny-Sevices?type=design&node-id=0-1&mode=design&t=CZpMnnOCRwAYc81O-0 'Figma Nanny Services')
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best
-performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-<!-- [Link to site](https://svitlanaparyiska.github.io/ape-nft/ 'Ape-NFT')
-
-![GitHub ReadMe](./src/images/readmeNFT.PNG) -->
+![GitHub ReadMe](./src/images/readmeNanny.PNG)
