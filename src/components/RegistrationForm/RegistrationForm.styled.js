@@ -39,9 +39,6 @@ export const InputWrapper = styled.div`
   }
 `;
 
-export const ButtonWrapper = styled.div`
-  display: inline-block;
-`;
 
 export const ErrorText = styled.div`
   color: red;

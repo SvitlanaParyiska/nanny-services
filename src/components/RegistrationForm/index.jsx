@@ -3,10 +3,8 @@ import { ErrorMessage } from 'formik';
 import { registrationSchema } from '../../helpers/validationSchemas';
 import { useState } from 'react';
 import sprite from '../../images/sprite.svg';
-import Button from 'components/Button';
 import {
   ButtonStyled,
-  ButtonWrapper,
   ErrorText,
   FormWrapper,
   IconPasswordWrapper,
@@ -31,17 +29,6 @@ function RegistrationForm({ handleModalToggle }) {
   };
 
   const passwordIcon = showPassword ? 'icon-eye' : 'icon-eye-off';
-
-  // const handleSubmit = async ({ name, email, password }, actions) => {
-  //   try {
-  //     console.log(name, email, password);
-  //     dispatch(registration({ name, email, password }));
-  //     actions.resetForm();
-  //     handleModalToggle();
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
 
   return (
     <Formik
@@ -84,7 +71,7 @@ function RegistrationForm({ handleModalToggle }) {
               </label>
             </InputWrapper>
           </FormWrapper>
-          <ButtonStyled type="submit">Log up</ButtonStyled>
+          <ButtonStyled type="submit">Sign up</ButtonStyled>
         </form>
       )}
     </Formik>

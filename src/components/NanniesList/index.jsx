@@ -1,12 +1,20 @@
 import { nanoid } from 'nanoid';
 import { Button, ListStyled } from './NanniesList.styled';
 import NanniesItem from 'components/NanniesItem';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { selectFilter } from '../../redux/selectors';
+import { listByFilter } from 'helpers/filters';
 
 function NanniesList({ listToRender }) {
   const [limit, setLimit] = useState(3);
+  const [filterList, setFilterList] = useState(listToRender);
 
-  // const selectFilter = useSelector(selectFilter());
+  const filter = useSelector(selectFilter);
+
+  useEffect(() => {
+    setFilterList(listByFilter(filter, listToRender));
+  }, [listToRender, filter]);
 
   const handleLoadMore = () => {
     setLimit(prevCount => prevCount + 3);
@@ -15,11 +23,11 @@ function NanniesList({ listToRender }) {
   return (
     <>
       <ListStyled>
-        {listToRender?.slice(0, limit).map(nanny => (
+        {filterList?.slice(0, limit).map(nanny => (
           <NanniesItem item={nanny} key={nanoid()} />
         ))}
       </ListStyled>
-      {listToRender?.length > limit && (
+      {filterList?.length > limit && (
         <Button type="button" onClick={handleLoadMore}>
           Load more
         </Button>

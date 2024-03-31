@@ -23,6 +23,7 @@ export const registration = createAsyncThunk(
         displayName: body.name,
       });
       toast.success('You have successfully registration');
+      console.log(response.user);
       return response.user;
     } catch (error) {
       if (error.code === 'auth/weak-password') {
@@ -49,8 +50,13 @@ export const logIn = createAsyncThunk('auth/logIn', async (body, thunkAPI) => {
     toast.success('You have successfully login');
     return { uid, displayName, email };
   } catch (e) {
+    console.log(e.message);
+    if (e.message === 'auth/invalid-credential') {
+      toast.error('Login invalid!');
+    } else {
+      toast.error('Something went wrong. Please try again!');
+    }
     console.log(e);
-    // toast.error('Something went wrong. Please try again!');
     return { error: e.message };
   }
 });

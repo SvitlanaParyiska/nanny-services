@@ -4,14 +4,14 @@ import sprite from '../../images/sprite.svg';
 import { loginSchema } from '../../helpers/validationSchemas';
 import { ErrorMessage } from 'formik';
 import {
-  ButtonWrapper,
+  ButtonStyled,
   ErrorText,
   FormWrapper,
   IconPasswordWrapper,
   InputWrapper,
   SvgPasswordIcon,
 } from './LoginForm.styled';
-import Button from 'components/Button';
+
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/authOperations';
 
@@ -31,7 +31,6 @@ function LoginForm({ handleModalToggle }) {
   const passwordIcon = showPassword ? 'icon-eye' : 'icon-eye-off';
 
   const handleSubmit = async ({ email, password }, actions) => {
-    console.log(email, password);
     try {
       dispatch(logIn({ email, password }));
       actions.resetForm();
@@ -73,15 +72,7 @@ function LoginForm({ handleModalToggle }) {
               </label>
             </InputWrapper>
           </FormWrapper>
-          <ButtonWrapper>
-            <Button
-              padding={'16px 194px'}
-              text={'Log In'}
-              type={'submit'}
-              color={'#103931'}
-              handleClick={handleSubmit}
-            />
-          </ButtonWrapper>
+          <ButtonStyled type="submit">Log In</ButtonStyled>
         </form>
       )}
     </Formik>

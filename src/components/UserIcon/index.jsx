@@ -1,7 +1,11 @@
+import { useSelector } from 'react-redux';
 import sprite from '../../images/sprite.svg';
 import { UserIconBox, IconUserStyled } from './UserIcon.styled';
+import { selectUser } from '../../redux/selectors';
 
 function UserIcon() {
+  const user = useSelector(selectUser);
+
   return (
     <UserIconBox>
       <div>
@@ -9,7 +13,7 @@ function UserIcon() {
           <use href={`${sprite}#icon-mdi_user`} />
         </IconUserStyled>
       </div>
-      <p>Ilona</p>
+      <p>{user.name}</p>
     </UserIconBox>
   );
 }
