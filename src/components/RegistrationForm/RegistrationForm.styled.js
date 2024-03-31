@@ -70,7 +70,8 @@ export const ButtonStyled = styled.button`
   display: block;
   width: 100%;
   border: 1px solid transparent;
-  padding: 16px 190px;
+  padding: 16px 16px;
+  text-align: center;
   border-radius: 30px;
   background-color: #103931;
   color: #fbfbfb;

@@ -76,8 +76,10 @@ export const InputAria = styled.input`
 
 export const ButtonStyled = styled.button`
   border: 1px solid transparent;
+  width: 100%;
   border-radius: 30px;
-  padding: 16px 217px;
+  padding: 16px 16px;
+  text-align: center;
   background-color: #103931;
   color: #fbfbfb;
   font-size: 16px;
