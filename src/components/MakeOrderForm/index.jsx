@@ -35,7 +35,7 @@ function MakeOrderForm({ handleModalToggle }) {
       validationSchema={makeOrderSchema}
     >
       {({ handleSubmit }) => (
-        <form>
+        <form onSubmit={handleSubmit}>
           <Box>
             <label>
               <Field name="address" placeholder="Address" type="text" />

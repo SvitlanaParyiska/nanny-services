@@ -10,18 +10,16 @@ export const ButtonStyle = styled.button`
   letter-spacing: -0.01em;
   border-radius: 30px;
   padding: ${props => props.$padding};
-  transition: background-color 250ms var(--transition);
   border: ${props =>
     props.color
       ? `1px solid ${props.color}`
       : '1px solid rgba(251, 251, 251, 0.4)'};
+  transition: var(--transition);
 
   &:hover,
   &:focus {
-    /* background: var(--accent); */
+    background-color: #fbfbfb;
+    color: #103931;
+    border: 1px solid #103931;
   }
-
-  /* @media screen and (max-width: 768px) {
-    padding: 10px 50px;
-  } */
 `;

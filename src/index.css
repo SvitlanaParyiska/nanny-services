@@ -5,6 +5,7 @@
   --bg-primary: #fbfbfb;
   --bg-color: #f3f3f3;
   --bg-secondary: #103931;
+  --bg-color-accent: rgba(16, 57, 49, 0.2);
 
   /* text */
   --color-text-primary: rgba(17, 16, 28, 0.5);

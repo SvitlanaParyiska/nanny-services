@@ -39,6 +39,9 @@ export const makeOrderSchema = yup.object().shape({
     .required('Field is required')
     .min(10, 'Too Short!')
     .max(64, 'Maximum 64 characters'),
+  childAge: yup.string().required('Required'),
+  time: yup.string().required('Required'),
+  parents: yup.string().required('Required'),
   phone: yup
     .string()
     .matches(phoneRegExp, 'Phone number is not valid')
@@ -47,6 +50,4 @@ export const makeOrderSchema = yup.object().shape({
     .string()
     .required('Field is required')
     .matches(emailRegexp, 'Enter a correct email'),
-  time: yup.string().required('Required'),
-  parents: yup.string().required('Required'),
 });

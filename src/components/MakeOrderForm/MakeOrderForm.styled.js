@@ -75,7 +75,7 @@ export const InputAria = styled.input`
 `;
 
 export const ButtonStyled = styled.button`
-  border: none;
+  border: 1px solid transparent;
   border-radius: 30px;
   padding: 16px 217px;
   background-color: #103931;
@@ -85,10 +85,13 @@ export const ButtonStyled = styled.button`
   line-height: 1.25;
   letter-spacing: -0.01em;
   margin-top: 40px;
+  transition: var(--transition);
 
-  &:hover {
-    /* background-c: #a1b3a8; */
-    /* color: ; */
+  &:hover,
+  &:focus {
+    background-color: #fbfbfb;
+    color: #103931;
+    border: 1px solid #103931;
   }
 `;
 

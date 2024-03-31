@@ -39,10 +39,6 @@ export const InputWrapper = styled.div`
   }
 `;
 
-// export const ButtonWrapper = styled.div`
-//   display: inline-block;
-// `;
-
 export const ErrorText = styled.div`
   color: red;
   font-size: 14px;
@@ -73,9 +69,17 @@ export const SvgPasswordIcon = styled.svg`
 export const ButtonStyled = styled.button`
   display: block;
   width: 100%;
-  border: none;
+  border: 1px solid transparent;
   padding: 16px 190px;
   border-radius: 30px;
   background-color: #103931;
   color: #fbfbfb;
+  transition: var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: #fbfbfb;
+    color: var(--bg-secondary);
+    border: 1px solid #103931;
+  }
 `;

@@ -15,10 +15,10 @@ export const NavLinkStyled = styled(NavLink)`
   line-height: 1.25;
   letter-spacing: -0.01em;
   position: relative;
+  transition: var(--transition);
 
-  &::after {
+  &.active::after {
     content: '';
-    display: none;
     position: absolute;
     height: 10px;
     width: 10px;
@@ -30,7 +30,14 @@ export const NavLinkStyled = styled(NavLink)`
 
   &:hover {
     &::after {
-      display: block;
+      content: '';
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+      bottom: -15px;
+      left: calc(50% - 5px);
     }
   }
 `;

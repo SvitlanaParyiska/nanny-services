@@ -164,6 +164,11 @@ export const ButtonReadMore = styled.button`
   border: none;
   background-color: transparent;
   padding: 0;
+  transition: var(--transition);
+
+  &:hover {
+    color: var(--bg-secondary);
+  }
 `;
 
 export const ReviewsList = styled.ul`
@@ -175,7 +180,7 @@ export const ReviewsList = styled.ul`
 `;
 
 export const ButtonMake = styled.button`
-  border: none;
+  border: 1px solid transparent;
   border-radius: 30px;
   padding: 14px 28px;
   background-color: #103931;
@@ -185,4 +190,12 @@ export const ButtonMake = styled.button`
   line-height: 1.25;
   letter-spacing: -0.01em;
   color: #fbfbfb;
+  transition: var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: #fbfbfb;
+    color: var(--bg-secondary);
+    border: 1px solid #103931;
+  }
 `;

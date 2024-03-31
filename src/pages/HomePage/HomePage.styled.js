@@ -55,9 +55,31 @@ export const NavLinkStyled = styled(Link)`
   border-radius: 30px;
   padding: 18px 50px;
   width: 230px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
   color: var(--color-text-secondary);
+  transition: var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: #fbfbfb;
+    color: var(--bg-secondary);
+    border: 1px solid #103931;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: inherit;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: inherit;
+  }
 `;
