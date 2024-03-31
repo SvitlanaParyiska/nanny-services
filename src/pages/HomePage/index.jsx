@@ -7,6 +7,7 @@ import {
 } from './HomePage.styled';
 import Statistic from 'components/Statistic';
 import sprite from '../../images/sprite.svg';
+import MediaQuery from 'react-responsive';
 
 function HomePage() {
   return (
@@ -24,7 +25,9 @@ function HomePage() {
               />
             </svg>
           </NavLinkStyled>
-          <Statistic />
+          <MediaQuery minWidth={768}>
+            <Statistic />
+          </MediaQuery>
         </SectionBox>
       </SectionStyled>
     </main>

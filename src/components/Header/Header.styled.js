@@ -28,9 +28,35 @@ export const LogoStyled = styled(Link)`
     width: 50px;
   }
   > p {
-    font-weight: 500;
-    font-size: 24px;
+    font-weight: 400;
+    font-size: 18px;
     line-height: 1.17;
     letter-spacing: -0.02em;
+
+    @media screen and (min-width: 768px) {
+      font-weight: 500;
+      font-size: 24px;
+    }
+  }
+`;
+
+export const BurgerIcon = styled.svg`
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: var(--bg-color);
+  display: block;
+  cursor: pointer;
+  transition: var(--transition);
+
+  &:hover,
+  &:focus {
+    transform-origin: center center;
+    transform: scale(1.1);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 32px;
+    height: 32px;
   }
 `;

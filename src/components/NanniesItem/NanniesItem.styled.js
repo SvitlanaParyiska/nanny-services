@@ -1,12 +1,16 @@
 import styled from 'styled-components';
 
 export const ItemStyled = styled.li`
+  position: relative;
   padding: 24px;
-  display: flex;
 
-  gap: 24px;
   border-radius: 24px;
   background-color: var(--bg-primary);
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 24px;
+  }
 `;
 
 export const Thumb = styled.div`
@@ -33,7 +37,14 @@ export const ImageBorder = styled.div`
 
 export const NameBox = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-right: 98px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
 
   p {
     font-weight: 500;
@@ -49,10 +60,10 @@ export const NameBox = styled.div`
   }
 `;
 
-export const LocationBox = styled.div`
+export const LocationThumb = styled.div`
   display: flex;
-  gap: 48px;
-  height: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
 
   p {
     font-weight: 500;
@@ -63,11 +74,6 @@ export const LocationBox = styled.div`
       color: #38cd3e;
     }
   }
-`;
-
-export const LocationThumb = styled.div`
-  display: flex;
-  gap: 16px;
 
   div {
     display: flex;
@@ -83,6 +89,9 @@ export const RatingStyled = styled.div`
 `;
 
 export const IconFavAdd = styled.svg`
+  position: absolute;
+  top: 24px;
+  right: 24px;
   height: 26px;
   width: 26px;
   stroke: var(--color-text-accent);

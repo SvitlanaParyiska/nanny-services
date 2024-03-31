@@ -8,7 +8,6 @@ import {
   IconRating,
   ImageBorder,
   ItemStyled,
-  LocationBox,
   LocationThumb,
   NameBox,
   NannyAboutText,
@@ -67,34 +66,33 @@ function NanniesItem({ item }) {
       <ImageBorder>
         <img src={item.avatar_url} alt="nanny" />
       </ImageBorder>
+      <IconFavAdd aria-label="heart" onClick={handleFav}>
+        <use href={`${sprite}#${heartIcon}`} />
+      </IconFavAdd>
       <Thumb>
         <NameBox>
           <div>
             <p>Nanny</p>
             <h3>{item.name}</h3>
           </div>
-          <LocationBox>
-            <LocationThumb>
-              <div>
-                <IconLoc aria-label="location">
-                  <use href={`${sprite}#icon-map-pin`} />
-                </IconLoc>
-                <p>{item.location}</p>
-              </div>
-              <RatingStyled>
-                <IconRating aria-label="rating">
-                  <use href={`${sprite}#icon-star`} />
-                </IconRating>
-                <p>Rating: {item.rating}</p>
-              </RatingStyled>
-              <p>
-                Price / 1 hour: <span>{item.price_per_hour}$</span>
-              </p>
-            </LocationThumb>
-            <IconFavAdd aria-label="heart" onClick={handleFav}>
-              <use href={`${sprite}#${heartIcon}`} />
-            </IconFavAdd>
-          </LocationBox>
+
+          <LocationThumb>
+            <div>
+              <IconLoc aria-label="location">
+                <use href={`${sprite}#icon-map-pin`} />
+              </IconLoc>
+              <p>{item.location}</p>
+            </div>
+            <RatingStyled>
+              <IconRating aria-label="rating">
+                <use href={`${sprite}#icon-star`} />
+              </IconRating>
+              <p>Rating: {item.rating}</p>
+            </RatingStyled>
+            <p>
+              Price / 1 hour: <span>{item.price_per_hour}$</span>
+            </p>
+          </LocationThumb>
         </NameBox>
         <AgeBox>
           <li>
@@ -133,7 +131,6 @@ function NanniesItem({ item }) {
           </ButtonReadMore>
         ) : (
           <>
-            {' '}
             <ReviewsList>
               {item.reviews.map(review => (
                 <ReviewItem review={review} key={nanoid()} />

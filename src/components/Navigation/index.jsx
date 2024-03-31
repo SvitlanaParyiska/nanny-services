@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux';
 import { NavBox, NavLinkStyled, NavList } from './Navigation.styled';
 import { selectIsLoggedIn } from '../../redux/selectors';
-import sprite from '../../images/sprite.svg';
 import { useLocation } from 'react-router-dom';
 
 function Navigation() {
@@ -12,14 +11,10 @@ function Navigation() {
     <NavBox $current={currentUrl.pathname === '/' ? 'main' : ''}>
       <NavList>
         <li>
-          <NavLinkStyled to="/" img={`${sprite}#icon-after`}>
-            Home
-          </NavLinkStyled>
+          <NavLinkStyled to="/">Home</NavLinkStyled>
         </li>
         <li>
-          <NavLinkStyled to="/nannies" img={`${sprite}#icon-after`}>
-            Nannies
-          </NavLinkStyled>
+          <NavLinkStyled to="/nannies">Nannies</NavLinkStyled>
         </li>
         {isLoggedIn && (
           <li>

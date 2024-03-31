@@ -13,11 +13,16 @@ export const SectionStyled = styled.section`
 export const SectionBox = styled.div`
   background-color: var(--bg-secondary);
   height: calc(100vh - 64px);
-  padding: 90px 50px 50px 96px;
+  padding: 90px 20px 96px 20px;
   border-radius: 30px;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  background-image: url(${bg});
 
   @media screen and (min-width: 768px) {
+    padding: 90px 50px 50px 96px;
     background-repeat: no-repeat;
     background-position: right;
     background-size: calc((100% - 64px) / 2) calc(100vh - 64px);
@@ -35,19 +40,27 @@ export const HeroTitle = styled.h1`
   margin-top: 163px;
   max-width: 517px;
   font-weight: 500;
-  font-size: 70px;
+  font-size: 30px;
   letter-spacing: -0.03em;
   color: var(--color-text-secondary);
+
+  @media screen and (min-width: 768px) {
+    font-size: 70px;
+  }
 `;
 
 export const SecondTitle = styled.h2`
   margin-top: 28px;
   margin-bottom: 64px;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 1.07;
   letter-spacing: -0.02em;
   color: var(--color-text-secondary);
+
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+  }
 `;
 
 export const NavLinkStyled = styled(Link)`
