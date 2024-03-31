@@ -1,12 +1,14 @@
 import Filter from 'components/Filter';
 import { useSelector } from 'react-redux';
-import { selectFavorites } from '../../redux/selectors';
+import { selectFavorites, selectUser } from '../../redux/selectors';
 import NanniesList from 'components/NanniesList';
 
 import { LinkStyled, TextStyled } from './FavoritesPage.styled';
 
 function FavoritesPage() {
-  const favArray = useSelector(selectFavorites);
+  const user = useSelector(selectUser);
+  const fav = useSelector(selectFavorites);
+  const favArray = fav.filter(item => item.userId === user.userId)[0].list;
 
   return (
     <main className="nanny-page">

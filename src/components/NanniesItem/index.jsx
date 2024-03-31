@@ -23,15 +23,29 @@ import ReviewItem from 'components/ReviewItem';
 import ModalMakeOrder from 'components/Modals/ModalMakeOrder';
 import BasicModal from 'components/Modals/BasicModal';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectFavorites, selectIsLoggedIn } from '../../redux/selectors';
+import {
+  selectFavorites,
+  selectIsLoggedIn,
+  selectUser,
+} from '../../redux/selectors';
 import { addFavorite, removeFavorite } from '../../redux/nannySlice';
 import toast from 'react-hot-toast';
 
 function NanniesItem({ item }) {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const dispatch = useDispatch();
+  const user = useSelector(selectUser);
   const favArray = useSelector(selectFavorites);
-  const isFavorite = favArray.find(nanny => nanny.name === item.name);
+  const isUserFav = favArray.findIndex(
+    itemFav => itemFav.userId === user.userId
+  );
+  let isFavorite = false;
+  if (isUserFav !== -1) {
+    isFavorite = favArray[isUserFav].list.find(
+      nanny => nanny.name === item.name
+    );
+  }
+
   const [isReadMore, setIsReadMore] = useState(false);
   const [modalMakeOr, setModalMakeOr] = useState(false);
 
@@ -49,12 +63,12 @@ function NanniesItem({ item }) {
       return;
     }
     if (isFavorite) {
-      dispatch(removeFavorite(item.name));
+      dispatch(removeFavorite({ itemName: item.name, userId: user.userId }));
       toast.success('Nanny was successful deleted!', {
         timeout: 2000,
       });
     } else {
-      dispatch(addFavorite(item));
+      dispatch(addFavorite({ item, userId: user.userId }));
       toast.success('Nanny was successful added!', {
         timeout: 2000,
       });
@@ -75,7 +89,6 @@ function NanniesItem({ item }) {
             <p>Nanny</p>
             <h3>{item.name}</h3>
           </div>
-
           <LocationThumb>
             <div>
               <IconLoc aria-label="location">

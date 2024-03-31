@@ -12,11 +12,23 @@ export const nannySlice = createSlice({
   initialState,
   reducers: {
     addFavorite: (state, { payload }) => {
-      state.favorites.push(payload);
+      const isUserId = state.favorites.findIndex(
+        item => item.userId === payload.userId
+      );
+      if (isUserId === -1) {
+        state.favorites.push({ userId: payload.userId, list: [payload.item] });
+      } else {
+        state.favorites[isUserId].list.push(payload.item);
+      }
     },
     removeFavorite: (state, { payload }) => {
-      const index = state.favorites.findIndex(item => item.name === payload);
-      state.favorites.splice(index, 1);
+      const isUserId = state.favorites.findIndex(
+        item => item.userId === payload.userId
+      );
+      const index = state.favorites[isUserId].list.findIndex(
+        item => item.name === payload.itemName
+      );
+      state.favorites[isUserId].list.splice(index, 1);
     },
     setFilter: (state, { payload }) => {
       state.filter = payload;

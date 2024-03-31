@@ -22,7 +22,7 @@ const authPersistConfig = {
 const nannyPersistConfig = {
   key: 'nanny',
   storage,
-  whitelist: ['favorites', 'user'],
+  whitelist: ['favorites'],
 };
 
 export const store = configureStore({
