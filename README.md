@@ -34,4 +34,4 @@ and quickly fill out an application.
 [Link to site](https://svitlanaparyiska.github.io/nanny-services/ 'Nanny Services')
 [Link to Figma layout](https://www.figma.com/file/u36ajEOsnwio2GDGiabVPD/Nanny-Sevices?type=design&node-id=0-1&mode=design&t=CZpMnnOCRwAYc81O-0 'Figma Nanny Services')
 
-![GitHub ReadMe](./src/images/readmeNanny.PNG)
+![GitHub ReadMe](./src/images/readme.PNG)
