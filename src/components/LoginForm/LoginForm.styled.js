@@ -53,7 +53,7 @@ export const IconPasswordWrapper = styled.span`
   align-items: center;
   justify-content: center;
   width: 20px;
-  bottom: 17px;
+  top: 17px;
   right: 14px;
   background-color: transparent;
   border: none;

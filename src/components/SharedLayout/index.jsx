@@ -11,12 +11,10 @@ function SharedLayout() {
   return (
     <>
       <Header />
-      <main>
-        {loading && <Loader />}
-        <Suspense fallback={<Loader />}>
-          <Outlet />
-        </Suspense>
-      </main>
+      {loading && <Loader />}
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </>
   );
 }
