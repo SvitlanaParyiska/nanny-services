@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/nanny-services/static/css/main.22ae4dea.css",
-    "main.js": "/nanny-services/static/js/main.7e54b3d0.js",
+    "main.css": "/nanny-services/static/css/main.1bc315e5.css",
+    "main.js": "/nanny-services/static/js/main.4ccd3809.js",
     "static/js/96.64a4fe55.chunk.js": "/nanny-services/static/js/96.64a4fe55.chunk.js",
     "static/js/405.b73ef549.chunk.js": "/nanny-services/static/js/405.b73ef549.chunk.js",
     "static/js/750.ae15780b.chunk.js": "/nanny-services/static/js/750.ae15780b.chunk.js",
     "static/js/232.eaf3ff67.chunk.js": "/nanny-services/static/js/232.eaf3ff67.chunk.js",
-    "static/js/603.6d995c68.chunk.js": "/nanny-services/static/js/603.6d995c68.chunk.js",
+    "static/js/603.17e1ef7d.chunk.js": "/nanny-services/static/js/603.17e1ef7d.chunk.js",
     "static/media/Rectangle@2x.jpg": "/nanny-services/static/media/Rectangle@2x.129563e909acb0facf67.jpg",
     "static/media/Rectangle.jpg": "/nanny-services/static/media/Rectangle.2f93d3128be5e02c1322.jpg",
     "static/media/imagesLogo.png": "/nanny-services/static/media/imagesLogo.921803dafd207adb5344.png",
@@ -21,16 +21,16 @@
     "static/media/HelveticaNeueCyr-Bold.woff2": "/nanny-services/static/media/HelveticaNeueCyr-Bold.a737902275e936eaf242.woff2",
     "static/media/sprite.svg": "/nanny-services/static/media/sprite.0429d0a2baed71aac671029daf44735f.svg",
     "index.html": "/nanny-services/index.html",
-    "main.22ae4dea.css.map": "/nanny-services/static/css/main.22ae4dea.css.map",
-    "main.7e54b3d0.js.map": "/nanny-services/static/js/main.7e54b3d0.js.map",
+    "main.1bc315e5.css.map": "/nanny-services/static/css/main.1bc315e5.css.map",
+    "main.4ccd3809.js.map": "/nanny-services/static/js/main.4ccd3809.js.map",
     "96.64a4fe55.chunk.js.map": "/nanny-services/static/js/96.64a4fe55.chunk.js.map",
     "405.b73ef549.chunk.js.map": "/nanny-services/static/js/405.b73ef549.chunk.js.map",
     "750.ae15780b.chunk.js.map": "/nanny-services/static/js/750.ae15780b.chunk.js.map",
     "232.eaf3ff67.chunk.js.map": "/nanny-services/static/js/232.eaf3ff67.chunk.js.map",
-    "603.6d995c68.chunk.js.map": "/nanny-services/static/js/603.6d995c68.chunk.js.map"
+    "603.17e1ef7d.chunk.js.map": "/nanny-services/static/js/603.17e1ef7d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.22ae4dea.css",
-    "static/js/main.7e54b3d0.js"
+    "static/css/main.1bc315e5.css",
+    "static/js/main.4ccd3809.js"
   ]
 }
