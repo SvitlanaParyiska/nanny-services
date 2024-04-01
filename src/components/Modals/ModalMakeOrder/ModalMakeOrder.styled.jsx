@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+
 export const Wrapper = styled.div`
   padding: 64px;
   max-width: 600px;
+  height: 100%;
 `;
 
 export const Title = styled.h2`
@@ -37,6 +39,7 @@ export const NannyInfoBox = styled.div`
     line-height: 1.33333;
     color: #8a8a89;
   }
+
   h4 {
     margin-top: 4px;
     font-weight: 500;

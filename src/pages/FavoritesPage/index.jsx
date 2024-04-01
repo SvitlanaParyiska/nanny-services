@@ -8,12 +8,12 @@ import { LinkStyled, TextStyled } from './FavoritesPage.styled';
 function FavoritesPage() {
   const user = useSelector(selectUser);
   const fav = useSelector(selectFavorites);
-  const favArray = fav.filter(item => item.userId === user.userId)[0].list;
+  const favArray = fav.filter(item => item.userId === user.userId)[0]?.list;
 
   return (
     <main className="nanny-page">
       <section className="container">
-        {favArray.length > 0 ? (
+        {favArray?.length > 0 ? (
           <>
             <Filter />
             <NanniesList listToRender={favArray} />

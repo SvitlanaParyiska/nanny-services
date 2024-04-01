@@ -6,8 +6,8 @@ import {
   NavLinkStyled,
 } from './HomePage.styled';
 import Statistic from 'components/Statistic';
-import sprite from '../../images/sprite.svg';
 import MediaQuery from 'react-responsive';
+import { ReactComponent as IconArrow } from '../../images/arrow.svg';
 
 function HomePage() {
   return (
@@ -17,13 +17,8 @@ function HomePage() {
           <HeroTitle>Make Life Easier for the Family:</HeroTitle>
           <SecondTitle>Find Babysitters Online for All Occasions</SecondTitle>
           <NavLinkStyled to="/nannies">
-            <p>Nanny.Services</p>
-            <svg aria-label="icon-arrow-right">
-              <use
-                href={`${sprite}#icon-arrow-right2`}
-                alt="icon-arrow-right"
-              />
-            </svg>
+            <span>Nanny.Services</span>
+            <IconArrow />
           </NavLinkStyled>
           <MediaQuery minWidth={768}>
             <Statistic />

@@ -23,7 +23,7 @@ export const registration = createAsyncThunk(
       await updateProfile(auth.currentUser, {
         displayName: name,
       });
-      toast.success('You have successfully registration');
+      toast.success(`You have successfully registration! Welcome, ${name} `);
       return {
         email: user.email,
         id: user.uid,
@@ -48,7 +48,7 @@ export const logIn = createAsyncThunk('auth/logIn', async (body, thunkAPI) => {
   try {
     const response = await signInWithEmailAndPassword(auth, email, password);
     const user = response.user;
-    toast.success('You have successfully login');
+    toast.success(`Welcome, ${user.displayName}`);
     return {
       email: user.email,
       id: user.uid,

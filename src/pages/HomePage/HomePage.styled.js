@@ -68,31 +68,29 @@ export const NavLinkStyled = styled(Link)`
   border-radius: 30px;
   padding: 18px 50px;
   width: 230px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  color: var(--color-text-secondary);
   transition: var(--transition);
+  color: var(--color-text-secondary);
 
-  &:hover,
-  &:focus {
-    background-color: #fbfbfb;
-    color: var(--bg-secondary);
-    border: 1px solid #103931;
-  }
-
-  p {
+  span {
+    color: inherit;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: -0.01em;
-    color: inherit;
+    margin-right: 18px;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      transform-origin: center left;
+      transform: rotate(52deg);
+    }
   }
 
   svg {
-    width: 20px;
-    height: 20px;
-    fill: inherit;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
   }
 `;
