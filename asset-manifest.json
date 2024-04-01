@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/nanny-services/static/css/main.f7edd05f.css",
-    "main.js": "/nanny-services/static/js/main.73066236.js",
-    "static/js/96.d6502103.chunk.js": "/nanny-services/static/js/96.d6502103.chunk.js",
+    "main.css": "/nanny-services/static/css/main.ccf5cc8f.css",
+    "main.js": "/nanny-services/static/js/main.e41eb60b.js",
+    "static/js/15.167222e4.chunk.js": "/nanny-services/static/js/15.167222e4.chunk.js",
     "static/js/405.b73ef549.chunk.js": "/nanny-services/static/js/405.b73ef549.chunk.js",
-    "static/js/750.eda48e89.chunk.js": "/nanny-services/static/js/750.eda48e89.chunk.js",
+    "static/js/750.ea673961.chunk.js": "/nanny-services/static/js/750.ea673961.chunk.js",
     "static/js/232.eaf3ff67.chunk.js": "/nanny-services/static/js/232.eaf3ff67.chunk.js",
-    "static/js/603.66564e3c.chunk.js": "/nanny-services/static/js/603.66564e3c.chunk.js",
+    "static/js/603.90773018.chunk.js": "/nanny-services/static/js/603.90773018.chunk.js",
     "static/media/Rectangle@2x.jpg": "/nanny-services/static/media/Rectangle@2x.129563e909acb0facf67.jpg",
     "static/media/Rectangle.jpg": "/nanny-services/static/media/Rectangle.2f93d3128be5e02c1322.jpg",
     "static/media/imagesLogo.png": "/nanny-services/static/media/imagesLogo.921803dafd207adb5344.png",
@@ -21,16 +21,17 @@
     "static/media/HelveticaNeueCyr-Bold.woff2": "/nanny-services/static/media/HelveticaNeueCyr-Bold.a737902275e936eaf242.woff2",
     "static/media/sprite.svg": "/nanny-services/static/media/sprite.37b4d374490ea0774b0acb5f66bd081b.svg",
     "index.html": "/nanny-services/index.html",
-    "main.f7edd05f.css.map": "/nanny-services/static/css/main.f7edd05f.css.map",
-    "main.73066236.js.map": "/nanny-services/static/js/main.73066236.js.map",
-    "96.d6502103.chunk.js.map": "/nanny-services/static/js/96.d6502103.chunk.js.map",
+    "static/media/arrow.svg": "/nanny-services/static/media/arrow.4a30931a28575c9d4bd65af69fc7b3aa.svg",
+    "main.ccf5cc8f.css.map": "/nanny-services/static/css/main.ccf5cc8f.css.map",
+    "main.e41eb60b.js.map": "/nanny-services/static/js/main.e41eb60b.js.map",
+    "15.167222e4.chunk.js.map": "/nanny-services/static/js/15.167222e4.chunk.js.map",
     "405.b73ef549.chunk.js.map": "/nanny-services/static/js/405.b73ef549.chunk.js.map",
-    "750.eda48e89.chunk.js.map": "/nanny-services/static/js/750.eda48e89.chunk.js.map",
+    "750.ea673961.chunk.js.map": "/nanny-services/static/js/750.ea673961.chunk.js.map",
     "232.eaf3ff67.chunk.js.map": "/nanny-services/static/js/232.eaf3ff67.chunk.js.map",
-    "603.66564e3c.chunk.js.map": "/nanny-services/static/js/603.66564e3c.chunk.js.map"
+    "603.90773018.chunk.js.map": "/nanny-services/static/js/603.90773018.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7edd05f.css",
-    "static/js/main.73066236.js"
+    "static/css/main.ccf5cc8f.css",
+    "static/js/main.e41eb60b.js"
   ]
 }
